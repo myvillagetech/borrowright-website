@@ -1,0 +1,677 @@
+<main>
+    <!-- <div class="FloatIcon_FloatIcon__JBW0S">
+        <div class="FloatIcon_Icon__OAYI3"><img alt="Urban Money Float Icon" loading="lazy" width="28" height="25"
+                decoding="async" data-nimg="1" src="/assets/images/FloatIcon.svg" style="color: transparent;"></div>
+        <div class="FloatIcon_title__0ZXTP">
+            <div class="FloatIcon_closeIcon__Gi9ll"></div>
+            <p class="fontBold font12 mb10">Need Loan Assistance?</p><button
+                class="btn FloatIcon_connectNow__pDqOd">Connect Now <em class="icon-arrow-right font12"></em> </button>
+        </div>
+    </div> -->
+    <!-- <div class="container">
+        <div class="BreadCrumb_breadCrumb__pNdJT">
+            <ul>
+                <li><a class="text777 font12" href="/">Home</a></li>
+                <li class="text777 font12 "><a class="" href="https://www.urbanmoney.com/calculator">Calculators</a>
+                </li>
+                <li class="text777 font12 ">EMI Calculator</li>
+            </ul>
+        </div>
+    </div> -->
+    <section class="calculator">
+        <div class="container">
+            <h1 class="font24 mb30 text2828 bottomborderf5a623 Innerheading fontsemiBold lineHeight36">Home Loan
+                Calculator</h1>
+            <div class="mt35 cmstext font14">
+                <p style="text-align: justify;">A Home Loan EMI Calculator is a powerful and user-friendly tool that
+                    helps potential homebuyers and homeowners in India to understand and calculate monthly installments
+                    as per their financial needs. Upon entering some required details, the calculator easily computes
+                    your EMI amount. Calculate your Home Loan EMI now with ease.</p>
+            </div>
+            <div class="calculator_buttonTab__rjaUN"><a class="calculator_tabs__6JeFT "
+                    [ngClass]="{'calculator_active__5NJUZ': homeLoanType === 'emi'}"
+                    (click)="changeHomeLoanType('emi')">
+                    <figure><img alt="emi svg" loading="lazy" width="19" height="18" decoding="async" data-nimg="1"
+                            class="imgResponsive" src="https://cdn.urbanmoney.com/images/emi.svg"
+                            style="color: transparent;"></figure> EMI Calculator
+                </a>
+                <!-- <a class="calculator_tabs__6JeFT "
+                    href="https://www.urbanmoney.com/loans/home-loan/balance-transfer-calculator">
+                    <figure><img alt="bt svg" loading="lazy" width="19" height="20" decoding="async" data-nimg="1"
+                            class="imgResponsive" src="https://cdn.urbanmoney.com/images/bt.svg"
+                            style="color: transparent;"></figure>Balance Transfer
+                </a> -->
+                <a class="calculator_tabs__6JeFT "
+                    [ngClass]="{'calculator_active__5NJUZ': homeLoanType === 'prePayment'}"
+                    (click)="changeHomeLoanType('prePayment')">
+                    <figure><img alt="prepay svg" loading="lazy" width="19" height="19" decoding="async" data-nimg="1"
+                            class="imgResponsive" src="https://cdn.urbanmoney.com/images/pre-pay.svg"
+                            style="color: transparent;"></figure> Pre - Payment
+                </a>
+            </div>
+            <div class="calculator_calcBox__R_RRW">
+                <div class="form-container w100 ptl15Sm">
+                    <div class="raidoInputBox mb30">
+                        <label class="radioInput text313541">
+                            <input class="form-check-input" type="radio" name="loanType" [(ngModel)]="selectedLoanType"
+                                value="homeLoan" (ngModelChange)="handleLoanTypeChange('home')">
+                            <span class="radioCheck"></span>
+                            <span class="radioText font12 fontsemiBold">Home Loan</span>
+                        </label>
+
+                        <label class="radioInput text313541">
+                            <input class="form-check-input" type="radio" name="loanType" [(ngModel)]="selectedLoanType"
+                                value="personalLoan" (ngModelChange)="handleLoanTypeChange('personal')">
+                            <span class="radioCheck"></span>
+                            <span class="radioText font12 fontsemiBold">Personal Loan</span>
+                        </label>
+
+                        <label class="radioInput text313541">
+                            <input class="form-check-input" type="radio" name="loanType" [(ngModel)]="selectedLoanType"
+                                value="businessLoan" (ngModelChange)="handleLoanTypeChange('business')">
+                            <span class="radioCheck"></span>
+                            <span class="radioText font12 fontsemiBold">Business Loan</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="calculator_calc__nueZG">
+                    <div class="calculator_rangecalc__wJBbD calculator_emimarg__QI_L7">
+                        <div class="calculator_calcValues__rSbuc"><label>Loan Amount</label>
+                            <div class="calculator_inputGrp__Xp0tw"><span class="calculator_Sign__zxYy9">₹</span><input
+                                    type="text" name="loanAmount" class="calculator_calcValuesInput__MzEPW"
+                                    autocomplete="off" [(ngModel)]="loanAmount" (ngModelChange)="emiCalculator()"></div>
+                        </div>
+                        <div class="calculator_rangeSlider__jU9si"><input type="range" class="slider maxl"
+                                [min]="minLoanAmount" [max]="10000000" name="loanAmount" [(ngModel)]="loanAmount" step="100000"
+                                (ngModelChange)="emiCalculator()">
+                            <ul class="calculator_range-labels__l3XU9">
+                                <li>{{minLoanAmountLabel}}</li>
+                                <li>{{maxLoanAmountLabel}}</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="calculator_rangecalc__wJBbD calculator_emimarg__QI_L7">
+                        <div class="calculator_calcValues__rSbuc"><label>Loan Tenure</label>
+                            <div class="calculator_inputGrp__Xp0tw"><input type="number" name="tenure"
+                                    class="calculator_calcValuesInput__MzEPW calculator_lwidth__E9IXx"
+                                    autocomplete="off" [(ngModel)]="loanTenure" (ngModelChange)="emiCalculator()"><span
+                                    class="calculator_Sign__zxYy9">Years</span>
+                            </div>
+                        </div>
+                        <div class="calculator_rangeSlider__jU9si"><input type="range" class="slider minl"
+                                [min]="minLoanTenure" [max]="maxLoanTenure" name="tenure" [(ngModel)]="loanTenure" 
+                                (ngModelChange)="emiCalculator()">
+                            <ul class="calculator_range-labels__l3XU9">
+                                <li>{{minLoanTenure}}</li>
+                                <li>{{maxLoanTenure}}</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="calculator_rangecalc__wJBbD calculator_emimarg__QI_L7">
+                        <div class="calculator_calcValues__rSbuc"><label>Rate Of Interest</label>
+                            <div class="calculator_inputGrp__Xp0tw"><input type="number" name="rate"
+                                    class="calculator_calcValuesInput__MzEPW calculator_ratel__Wif0S "
+                                    autocomplete="off" [(ngModel)]="rateOfInterest" (ngModelChange)="emiCalculator()"><span
+                                    class="calculator_Sign__zxYy9">%</span></div>
+                        </div>
+                        <div class="calculator_rangeSlider__jU9si"><input type="range" class="slider minl"
+                                [min]="minRateOfInterest" [max]="maxRateOfInterest" name="rate" step="0.05"
+                                [(ngModel)]="rateOfInterest" (ngModelChange)="emiCalculator()">
+                            <ul class="calculator_range-labels__l3XU9">
+                                <li>{{minRateOfInterest}}</li>
+                                <li>{{maxRateOfInterest}}</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="calculator_rangecalc__wJBbD calculator_emimarg__QI_L7"
+                        *ngIf="homeLoanType === 'prePayment'">
+                        <div class="calculator_calcValues__rSbuc"><label>Prepayment Amount</label>
+                            <div class="calculator_inputGrp__Xp0tw"><span class="calculator_Sign__zxYy9">₹</span><input
+                                    type="text" name="prePayment" class="calculator_calcValuesInput__MzEPW"
+                                    autocomplete="off" [(ngModel)]="prePaymentAmount" (ngModelChange)="emiCalculator()"></div>
+                        </div>
+                        <div class="calculator_rangeSlider__jU9si"><input type="range" class="slider minl"
+                                [min]="minPrePaymentAmount" [max]="loanAmount" name="prepaymentAmount"
+                                [(ngModel)]="prePaymentAmount" (ngModelChange)="emiCalculator()">
+                            <ul class="calculator_range-labels__l3XU9">
+                                <li>{{minPrePaymentAmountLabel}}</li>
+                                <li>{{loanAmount}}</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="calculator_rangecalc__wJBbD calculator_emimarg__QI_L7"
+                        *ngIf="homeLoanType === 'prePayment'">
+                        <div class="calculator_calcValues__rSbuc"><label>Number Of EMI's Paid</label>
+                            <div class="calculator_inputGrp__Xp0tw"><input type="number" name="tenure"
+                                    class="calculator_calcValuesInput__MzEPW "
+                                    autocomplete="off" [(ngModel)]="numberOfEmisPaid" (ngModelChange)="emiCalculator()"><span
+                                    class="calculator_Sign__zxYy9">Years</span>
+                            </div>
+                        </div>
+                        <div class="calculator_rangeSlider__jU9si"><input type="range" class="slider minl"
+                                [min]="minEmisPaid" [max]="(loanTenure * 12) -1" name="tenure" [(ngModel)]="numberOfEmisPaid"
+                                (ngModelChange)="emiCalculator()">
+                            <ul class="calculator_range-labels__l3XU9">
+                                <li>{{minEmisPaid}}</li>
+                                <li>{{(loanTenure * 12) -1}}</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="calculator_newcalcDetails__5nqoR">
+                    <p class="font12  text7c7f87 fontsemiBold mb20 type widthadj">{{this.homeLoanType === 'emi' ?
+                        "Monthly Loan EMI" : "Revised Monthly EMI"}}</p>
+                    <div class="mb20 calculator_totalamt__iIRE2" *ngIf="this.homeLoanType === 'emi' "><sup class="calculator_rupee___sHGb"></sup><span
+                            class="calculator_price__CqI2b">{{emiPerMonth | currency:'INR':'symbol':'1.0-0'}}</span>
+                    </div>
+
+                    <div class="mb20 calculator_totalamt__iIRE2" *ngIf="this.homeLoanType === 'prePayment' "><sup class="calculator_rupee___sHGb"></sup><span
+                        class="calculator_price__CqI2b">{{revisedEmi | currency:'INR':'symbol':'1.0-0'}}</span>
+                </div>
+                    <p class="font12 fontStyleItalic lineHeight20  text7c7f87 fontsemiBold textCenter type widthadj" *ngIf="this.homeLoanType === 'emi' ">
+                        {{ emiPerMonth | amountToWords | titlecase }}</p>
+                    <p class="font12 fontStyleItalic lineHeight20  text7c7f87 fontsemiBold textCenter type widthadj" *ngIf="this.homeLoanType === 'prePayment' ">
+                            {{ revisedEmi | amountToWords | titlecase }}</p>
+                </div>
+                <div class="calculator_calcDetail__xhxK9">
+                    <p class="font18 fontsemiBold text181d mb30 textCenter">{{this.homeLoanType === 'emi' ? "Payment Breakdown:":"Key Takeaways"}}</p>
+                    <div class="calculator_chart-container__HPAcY">
+                        <div class="multi-graph margin">
+                            JavaScript
+                            <div class="graph" [attr.data-name]="interstPayable"
+                                style="--percentage : 100; --fill: #0669AD ;">
+                            </div>
+                            <div class="graph" [attr.data-name]="loanAmount"
+                                [style.--percentage]="payableAmountPercentage" style="--fill: #E62A39;">
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="calculator_calculatevalues__YK6Ts" *ngIf="this.homeLoanType === 'emi'">
+                        <div class="calculator_amount__Nafh6">
+                            <div class="calculator_collect__vpURX"><span
+                                    class="calculator_pieBox__GrKUb calculator_amred__zEEHW"></span>
+                                <p class="calculator_info__eywyi"> Principal Amount</p>
+                            </div>
+                            <p class="calculator_amt__GBBik">{{loanAmount | currency:'INR':'symbol':'1.0-0'}}</p>
+                        </div>
+                        <div class="calculator_amount__Nafh6">
+                            <div class="calculator_collect__vpURX"><span
+                                    class="calculator_pieBox__GrKUb calculator_amblue__vIy0j"></span>
+                                <p class="calculator_info__eywyi"> Interest Payable</p>
+                            </div>
+                            <p class="calculator_amt__GBBik">{{interstPayable | currency:'INR':'symbol':'1.0-0'}}</p>
+                        </div>
+                        <div class="calculator_amount__Nafh6 calculator_total__LQDxS">
+                            <p class="calculator_info__eywyi">Total Amount Payable</p>
+                            <p class="calculator_amt__GBBik">{{totalAmountPayable | currency:'INR':'symbol':'1.0-0'}}
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="calculator_calculatevalues__YK6Ts" *ngIf="this.homeLoanType === 'prePayment'">
+                        <div class="calculator_amount__Nafh6">
+                            <div class="calculator_collect__vpURX"><span
+                                    class="calculator_pieBox__GrKUb calculator_amred__zEEHW"></span>
+                                <p class="calculator_info__eywyi">Original EMI</p>
+                            </div>
+                            <p class="calculator_amt__GBBik">{{originalEmi | currency:'INR':'symbol':'1.0-0'}}</p>
+                        </div>
+                        <div class="calculator_amount__Nafh6">
+                            <div class="calculator_collect__vpURX"><span
+                                    class="calculator_pieBox__GrKUb calculator_amblue__vIy0j"></span>
+                                <p class="calculator_info__eywyi"> Revised EMI</p>
+                            </div>
+                            <p class="calculator_amt__GBBik">{{revisedEmi | currency:'INR':'symbol':'1.0-0'}}</p>
+                        </div>
+                        <div class="calculator_amount__Nafh6 calculator_total__LQDxS">
+                            <p class="calculator_info__eywyi">Savings in Interest</p>
+                            <p class="calculator_amt__GBBik">{{savingsInInterest | currency:'INR':'symbol':'1.0-0'}}
+                            </p>
+                        </div>
+                    </div>
+                    <!-- <button class="btn font12 btn25 textCenterSm">{{this.homeLoanType === 'emi' ? 'View EMI Schedule' :
+                        "Apply for a Loan"}}<em class="icon-arrow-right font14"></em></button> -->
+                </div>
+            </div>
+            <div class="mt40" id="bankOffers" *ngIf="homeLoanType === 'emi'">
+                <h2 class="font22 mb25 text2828 fontsemiBold lineHeight36">EMI Payment Schedule</h2>
+                <div class="calculator_accordianTable__J_784 calculator_brekup__GYuTM calculator_active__5NJUZ"
+                    *ngFor="let data of emiBreakup let index = index">
+                    <div class="calculator_table__hZkhk">
+                        <ul class="calculator_showMonthly__rauZ8">
+                            <li>
+                                <p class="calculator_amount__Nafh6">{{data.year}}</p>
+                                <p class="calculator_type__fnn9o">Monthly payment</p>
+                            </li>
+                            <li (click)="handleMonthlyBreakupList(index)"><span
+                                    class="textLink font12 fontsemiBold cursorPointer">{{showMonthlyPaymentList ===
+                                    index ? "Hide" : "Show"}} Monthly Breakup <em
+                                        class="icon-icon-angle-right topmarg textLink"></em></span></li>
+                        </ul>
+                        <div class="calculator_dtlbox__D2Tej" *ngIf="showMonthlyPaymentList === index">
+                            <table>
+                                <thead>
+                                    <th>Months</th>
+                                    <th>Principal</th>
+                                    <th>Interest</th>
+                                    <th>Total Payment</th>
+                                    <th>Balance</th>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let monthData of data.monthData">
+                                        <td>{{monthData.monthName}}</td>
+                                        <td>{{monthData.principalRepayment | currency:'INR':'symbol':'1.0-0'}}</td>
+                                        <td>{{monthData.interestOnPrincipal | currency:'INR':'symbol':'1.0-0'}}</td>
+                                        <td>{{monthData.emiPerMonth | currency:'INR':'symbol':'1.0-0'}}</td>
+                                        <td>{{monthData.balance | currency:'INR':'symbol':'1.0-0'}}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- <div class="calculator_btncenter__sHVNT"><button
+                        class="btn btn-primary font14 btn25 textCenterSm btnFull">Show More<em
+                            class="icon-arrow-right font14"></em></button></div> -->
+            </div>
+        </div>
+    </section>
+    <div class="container containerFlex">
+        <section class="CmsContent_eligible__8MIhE">
+            <div class="container">
+                <div class="mt35">
+                    <h2 class="mt30 mb15 font18 text181d fontMedium">Home Loan Calculator - Calculate Your Housing Loan
+                        EMI Online</h2>
+                    <p>A tool that helps you in calculating your monthly instalments (EMIs) in a single click is known
+                        as the home loan EMI calculator. A home loan calculator in India is a helpful tool, especially
+                        when you want to plan your home loan budget and EMIs.</p>
+                    <p>Before preparing a checklist for a home loan, plan your monthly expenses and the amount you can
+                        spend as EMI without disturbing your budget. Borrow Right home loan EMI calculator has AI
+                        technology. And can help you in determining the amount you want to borrow from a bank or finance
+                        provider.</p>
+                    <p>Using the above home loan EMI calculator, we have compiled a table with lowest home loan interest
+                        rate.</p>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>Loan Amount</td>
+                                <td>₹50,00,000</td>
+                            </tr>
+                            <tr>
+                                <td>Rate of Interest</td>
+                                <td>8.40% p.a.</td>
+                            </tr>
+                            <tr>
+                                <td>Loan Tenure</td>
+                                <td>20 Years</td>
+                            </tr>
+                            <tr>
+                                <td>Monthly Installment</td>
+                                <td>₹43,075</td>
+                            </tr>
+                            <tr>
+                                <td>Total Interest Payable</td>
+                                <td>₹53,38,000</td>
+                            </tr>
+                            <tr>
+                                <td>Total Amount Payable</td>
+                                <td>₹1,03,38,000</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <h2 class="mt30 mb15 font18 text181d fontMedium">What are the Components of a Home Loan EMI
+                        Calculator?</h2>
+                    <p>The Borrow Right Housing loan EMI calculator consist of the following components:</p>
+                    <ul>
+                        <li><strong><span class="fontBold">Loan Amount:</span></strong>&nbsp;Any individual can easily
+                            enter the principal amount in the loan amount text box.</li>
+                        <li><strong><span class="fontBold">Tenure:</span></strong>&nbsp;The time period under which an
+                            individual will repay the complete amount apart from EMIs.</li>
+                        <li><strong><span class="fontBold">Rate of Interest:</span></strong>&nbsp;The chargeable
+                            interest amount. The rate of interest is variable depending on the bank or finance provider.
+                        </li>
+                        <li><strong><span class="fontBold">Home Loan EMI:</span></strong>&nbsp;An amount that the
+                            borrower is accountable to pay every month to the lender. The Borrow Right home loan EMI
+                            calculator will help the borrower to know how much amount is affordable.</li>
+                        <li><strong><span class="fontBold">Payment Breakup:</span></strong>&nbsp;The breakdown of the
+                            principal amount and interest is liable to pay at the end of the loan tenure.</li>
+                        <li><strong><span class="fontBold">Amortisation Schedule:</span></strong>&nbsp;After deduction,
+                            the remaining amount to be paid towards an outstanding home loan. It also displays the loan
+                            repayments, loan amount, and the time frame of scheduled payments, along with the remaining
+                            loan.</li>
+                    </ul>
+                    <h2 class="mt30 mb15 font18 text181d fontMedium">Steps to use Borrow Right Home Loan EMI Calculator
+                    </h2>
+                    <p>The Borrow Right Home loan calculator is very simple to use. If you are looking to get a home loan
+                        or want to check the payment break up schedule you can use Borrow Right. Here are the small and
+                        easy steps to check EMIs using this advanced calculator:</p>
+                    <p><strong><span class="fontBold">Step 1:</span></strong>&nbsp;Enter the principal amount you want
+                        to borrow from the bank or the finance lender.</p>
+                    <p><strong><span class="fontBold">Step 2:</span></strong>&nbsp;Now, enter the time period by which
+                        you will repay the complete loan amount.</p>
+                    <p><strong><span class="fontBold">Step 3:</span></strong>&nbsp;Write the rate of interest at which
+                        your bank or finance lender is providing your home loan.</p>
+                    <p><strong><span class="fontBold">Step 4:</span></strong>&nbsp;On the right-hand side you will be
+                        able to see the detailed calculations.</p>
+                    <p>The detailed calculations will include the</p>
+                    <ul class="oList blueList listSpanbold mb20">
+                        <li>Monthly Home Loan EMI</li>
+                        <li>Principal Amount</li>
+                        <li>Total Interest Payable</li>
+                        <li>Total Amount Payable</li>
+                    </ul>
+                    <p>You will also be able to see a detailed payment breakup along with the amortisation schedule.</p>
+                    <h2>Home Loan EMI Calculation Formula with Example&nbsp;</h2>
+                    <p>Online home loan EMI calculators use a specific formula to calculate the housing loan EMI amount,
+                        which is mentioned below: -</p>
+                    <p><span><strong>E = [P x R x (1+R) ^N] / [(1+R) ^N-1]</strong></span></p>
+                    <p>Here-</p>
+                    <ul>
+                        <li>E stands for EMI amount</li>
+                        <li>P stands for Principal amount</li>
+                        <li>R stands for Interest Rate</li>
+                        <li>N stands for Tenure</li>
+                    </ul>
+                    <p>Let's take an example for a better understanding of how this EMI formula for home loan works.</p>
+                    <p>Let’s consider that subject X avails a home loan worth Rs. 5 Crore for a tenure of 20 years at an
+                        agreed-upon interest rate of 10%. Now, according to the housing loan EMI calculation formula:-
+                    </p>
+                    <p>E = [50000000 x 10 x (1+10) ^ 20] / [(1+10) ^ 20-1]</p>
+                    <p>In this scenario, based on the calculation made by the home loan EMI calculator India, the
+                        monthly loan EMI amount should be Rs. 4,82,511.</p>
+                    <p>Every loan's Equated Monthly Installment (EMI) consists of two crucial elements: a principal
+                        amount and an interest amount. At the outset of the loan term, the interest is substantial,
+                        whereas the principal is comparatively smaller. This equation undergoes monthly adjustments as
+                        the total interest amount to be paid diminishes rapidly. With each EMI payment, the interest
+                        decreases while the principal portion increases.</p>
+                    <h2 class="mt30 mb15 font18 text181d fontMedium">How the Borrow Right Home Loan Calculator Helps You?
+                    </h2>
+                    <p>Preparing ahead before entering into new things is a wise idea! And when it comes to a home loan
+                        with repayment in decades, it is wise to plan.</p>
+                    <p>Use the advanced Borrow Right home loan calculator to calculate your EMIs in advance to plan your
+                        monthly budget and overall expense. Also, these calculations will help you in knowing whether
+                        you fall under the eligibility criteria or not.</p>
+                    <p>Using the house loan EMI calculator to know your EMIs prior to applying can be helpful in many
+                        ways. Here check the reasons why you should use it:</p>
+                    <h2 class="mt30 mb15 font18 text181d fontMedium">How much loan amount should you borrow?</h2>
+                    <p>The Borrow Right EMI calculator can guide you in deciding your home loan amount, based on the EMI
+                        affordability you can pay from your monthly income.</p>
+                    <h2 class="mt30 mb15 font18 text181d fontMedium">For how long the tenure should be?</h2>
+                    <p>With the right EMI amount that you can afford to pay on a monthly basis you can know the right
+                        time period for the repayment of your loan. How much must be paid as a down payment?</p>
+                    <p>The AI Borrow Right house loan EMI calculator can help you in figuring out the amount you must pay
+                        as your down payment. This can help you in saving maximum money on your interest while also
+                        keeping EMIs at a minimal level.</p>
+                    <p>The plan of action for cash flow and finance for on-time loan repayments.</p>
+                    <h2 class="mt30 mb15 font18 text181d fontMedium">Factors That Affect Your Home Loan EMI</h2>
+                    <p>The home loan EMI is influenced by several factors. Once you know the eligibility for housing
+                        finance, start setting out the home loan. Check the below-depicted factors as they can highly
+                        affect your home loan EMI:</p>
+                    <ul>
+                        <li><strong><span class="fontBold">Interest Rate:</span></strong>&nbsp;Fluctuations of interest
+                            rates are key influential factors and had a major impact on home loan EMIs. Therefore, it
+                            can create either positive or negative impacts on home loan EMI.</li>
+                        <li><strong><span class="fontBold">Tenure:</span></strong>&nbsp;The exact EMI is determined
+                            through the time frame and even the slightest change in time can affect the imposed EMI. So,
+                            acquiring a home loan for a short time frame can be daunting with an increased monthly
+                            instalment amount.</li>
+                        <li><strong><span class="fontBold">Prepayment:</span></strong>&nbsp;The prepayment before the
+                            completion of the loan tenure will have a great effect on the EMIs. However, some banks or
+                            lenders may charge you for prepayment due to their losses. But this step can reduce the
+                            burden directly from the outstanding balance.</li>
+                        <li><strong><span class="fontBold">Down payment:</span></strong>&nbsp;While applying for the
+                            house loan you will only get a maximum 75% to 90% value of the amount. And the rest will be
+                            paid as a down payment.</li>
+                        <li><strong><span class="fontBold">Change of Lender:</span></strong>&nbsp;If you are paying a
+                            higher interest rate, be sure to change your lender.</li>
+                    </ul>
+                    <h2 class="mt30 mb15 font18 text181d fontMedium">How to Reduce Your Home Loan EMI?</h2>
+                    <p>Get the EMI burden off your shoulders using the following tips. These tips and tricks won't
+                        remove the burden entirely but can surely help you in several ways.</p>
+                    <ul class="oList blueList listSpanbold mb20">
+                        <li>Make sure to check with multiple financial lenders before finalising the loan.</li>
+                        <li>Choose the great offers for the best deals with the lenders.</li>
+                        <li>Do not borrow the amount you won't be able to afford or to repay within the decided tenure.
+                        </li>
+                        <li>Make a down payment of a higher amount. It is because the higher the down payment lowers the
+                            EMIs amount.</li>
+                        <li>Choose the tenure wisely.</li>
+                        <li>Make pre-payment of your loan once a year if possible.</li>
+                        <li>Apply for a balanced transfer of the home loan to get a better deal than the current one.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!-- <div class="RightSideBar_creditDescTile__EwfAF  " id="enquireNow">
+            <h3 class="font16 font600 text181d mb15 mt30">Need Loan Assistance?</h3>
+            <div class="LeadPopup_contentBox__k4AzT LeadPopup_sideBarForm__yaxs1">
+                <p class="font12 text666 fontsemiBold">Connect with Loan Advisor Now!</p>
+                <div class="LeadPopup_form__ZbOgW">
+                    <div class="form-item"><input type="text" name="fullName" class="formInput" autocomplete="off"
+                            required="" maxlength="90" value=""><label for="fullName"
+                            class="font12 fontMedium formLabel">Full Name</label><span class="errorText"></span></div>
+                    <div class="form-item contBox"><span class="text303542 font12 contCode fontMedium">+91</span><input
+                            type="text" name="mobile" class="formInput" autocomplete="off" required="" maxlength="10"
+                            value=""><label for="mobileNo" class="font12 fontMedium formLabel">Mobile No.</label><span
+                            class="errorText"></span><span class="errorText"></span></div>
+                    <div class="form-item">
+                        <div class=" css-b62m3t-container"><span id="react-select-12-live-region"
+                                class="css-7pg0cj-a11yText"></span><span aria-live="polite" aria-atomic="false"
+                                aria-relevant="additions text" class="css-7pg0cj-a11yText"></span>
+                            <div class=" css-13cymwt-control">
+                                <div class=" css-hlgwow">
+                                    <div class=" css-1jqq78o-placeholder" id="react-select-12-placeholder">Choose City
+                                    </div>
+                                    <div class=" css-19bb58m" data-value=""><input class="" autocapitalize="none"
+                                            autocomplete="off" autocorrect="off" id="react-select-12-input"
+                                            spellcheck="false" tabindex="0" type="text" aria-autocomplete="list"
+                                            aria-expanded="false" aria-haspopup="true" role="combobox"
+                                            aria-describedby="react-select-12-placeholder" value=""
+                                            style="color: inherit; background: 0px center; opacity: 1; width: 100%; grid-area: 1 / 2; font: inherit; min-width: 2px; border: 0px; margin: 0px; outline: 0px; padding: 0px;">
+                                    </div>
+                                </div>
+                                <div class=" css-1wy0on6"><span class=" css-1u9des2-indicatorSeparator"></span>
+                                    <div class=" css-1xc3v61-indicatorContainer" aria-hidden="true"><svg height="20"
+                                            width="20" viewBox="0 0 20 20" aria-hidden="true" focusable="false"
+                                            class="css-8mmkcg">
+                                            <path
+                                                d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z">
+                                            </path>
+                                        </svg></div>
+                                </div>
+                            </div>
+                        </div><span class="errorText"></span>
+                    </div>
+                    <div class="form-item">
+                        <div class="Select_rangecalc__KDYd8">
+                            <div class="selectBox"><select name="productType" class="formInput undefined" required="">
+                                    <option value="">Choose Loan Type</option>
+                                    <option value="2">Personal Loan</option>
+                                    <option value="1">Home Loan</option>
+                                    <option value="3">Loan Against Property</option>
+                                    <option value="4">Business Loan</option>
+                                    <option value="8">Credit Card</option>
+                                </select></div>
+                        </div><span class="errorText"></span>
+                    </div>
+                    <div class="LeadPopup_rangecalc__wwLC4 mb0 "><button
+                            class="btn btn-primary textCenterSm font16 ">Submit </button><span class="errorText"></span>
+                    </div>
+                </div>
+            </div>
+            <h3 class="font16 font600 text181d mb15 mt30">Financial Calculators</h3>
+            <div class="RightSideBar_creditTile__tbrLG mb16">
+                <ul class="RightSideBar_btmoverflow__wat2N">
+                    <li><a class="font14 lineHeight22"
+                            href="https://www.urbanmoney.com/calculator/income-tax-calculator">Income Tax Calculator</a>
+                    </li>
+                    <li><a class="font14 lineHeight22" href="https://www.urbanmoney.com/calculator/sip-calculator">SIP
+                            Calculator</a></li>
+                    <li><a class="font14 lineHeight22" href="https://www.urbanmoney.com/calculator/fd-calculator">FD
+                            Calculator</a></li>
+                    <li><a class="font14 lineHeight22" href="https://www.urbanmoney.com/calculator/hra-calculator">HRA
+                            Calculator</a></li>
+                    <li><a class="font14 lineHeight22"
+                            href="https://www.urbanmoney.com/calculator/lumpsum-calculator">Lumpsum Calculator</a></li>
+                    <li><a class="font14 lineHeight22" href="https://www.urbanmoney.com/calculator/ppf-calculator">PPF
+                            Calculator</a></li>
+                    <li><a class="font14 lineHeight22" href="https://www.urbanmoney.com/calculator/rd-calculator">RD
+                            Calculator</a></li>
+                    <li><a class="font14 lineHeight22" href="https://www.urbanmoney.com/calculator/gst-calculator">GST
+                            Calculator</a></li>
+                    <li><a class="font14 lineHeight22"
+                            href="https://www.urbanmoney.com/calculator/sukanya-samriddhi-yojana-calculator">Sukanya
+                            Samridhi Yojana Calculator</a></li>
+                    <li><a class="font14 lineHeight22"
+                            href="https://www.urbanmoney.com/calculator/mutual-fund-calculator">Mutual Fund
+                            Calculator</a></li>
+                    <li><a class="font14 lineHeight22" href="https://www.urbanmoney.com/calculator/tds-calculator">TDS
+                            Calculator</a></li>
+                    <li><a class="font14 lineHeight22"
+                            href="https://www.urbanmoney.com/calculator/salary-calculator">Salary Calculator</a></li>
+                </ul>
+            </div>
+            <div
+                class="RightSideBar_creditTile__tbrLG RightSideBar_creditImg__B2mz1 mb16 RightSideBar_removePadding__YDnG5">
+                <a href="https://www.urbanmoney.com/credit-score"><img alt="Credit Score" loading="lazy" width="250"
+                        height="250" decoding="async" data-nimg="1" class="imgResponsive" sizes="100vw"
+                        srcset="/_next/image?url=https%3A%2F%2Fcdn.urbanmoney.com%2Fimages%2Fcreditscore.png&amp;w=640&amp;q=75 640w, /_next/image?url=https%3A%2F%2Fcdn.urbanmoney.com%2Fimages%2Fcreditscore.png&amp;w=750&amp;q=75 750w, /_next/image?url=https%3A%2F%2Fcdn.urbanmoney.com%2Fimages%2Fcreditscore.png&amp;w=828&amp;q=75 828w, /_next/image?url=https%3A%2F%2Fcdn.urbanmoney.com%2Fimages%2Fcreditscore.png&amp;w=1080&amp;q=75 1080w, /_next/image?url=https%3A%2F%2Fcdn.urbanmoney.com%2Fimages%2Fcreditscore.png&amp;w=1200&amp;q=75 1200w, /_next/image?url=https%3A%2F%2Fcdn.urbanmoney.com%2Fimages%2Fcreditscore.png&amp;w=1920&amp;q=75 1920w, /_next/image?url=https%3A%2F%2Fcdn.urbanmoney.com%2Fimages%2Fcreditscore.png&amp;w=2048&amp;q=75 2048w, /_next/image?url=https%3A%2F%2Fcdn.urbanmoney.com%2Fimages%2Fcreditscore.png&amp;w=3840&amp;q=75 3840w"
+                        src="/_next/image?url=https%3A%2F%2Fcdn.urbanmoney.com%2Fimages%2Fcreditscore.png&amp;w=3840&amp;q=75"
+                        style="color: transparent; width: 100%; height: auto;"></a>
+            </div>
+            <h3 class="font16 font600 text181d mb15 mt30">Top 10 Banks</h3>
+            <div class="RightSideBar_creditTile__tbrLG mb16">
+                <ul class="RightSideBar_btmoverflow__wat2N">
+                    <li><a class="font14 lineHeight22"
+                            href="https://www.urbanmoney.com/banks-in-india/idfc-first-bank">IDFC FIRST Bank</a></li>
+                    <li><a class="font14 lineHeight22" href="https://www.urbanmoney.com/banks-in-india/hdfc-bank">HDFC
+                            Bank</a></li>
+                    <li><a class="font14 lineHeight22" href="https://www.urbanmoney.com/banks-in-india/axis-bank">Axis
+                            Bank</a></li>
+                    <li><a class="font14 lineHeight22" href="https://www.urbanmoney.com/banks-in-india/kotak-bank">kotak
+                            Bank</a></li>
+                    <li><a class="font14 lineHeight22" href="https://www.urbanmoney.com/banks-in-india/icici-bank">ICICI
+                            Bank</a></li>
+                    <li><a class="font14 lineHeight22" href="https://www.urbanmoney.com/banks-in-india/yes-bank">Yes
+                            Bank</a></li>
+                    <li><a class="font14 lineHeight22"
+                            href="https://www.urbanmoney.com/banks-in-india/indiabulls">IndiaBulls</a></li>
+                    <li><a class="font14 lineHeight22"
+                            href="https://www.urbanmoney.com/banks-in-india/deutsche-bank">Deutsche Bank</a></li>
+                    <li><a class="font14 lineHeight22"
+                            href="https://www.urbanmoney.com/banks-in-india/standard-chartered-bank">Standard Chartered
+                            Bank</a></li>
+                    <li><a class="font14 lineHeight22"
+                            href="https://www.urbanmoney.com/banks-in-india/lt-finance">L&amp;T Finance</a></li>
+                </ul>
+            </div>
+            <h3 class="font16 font600 text181d mb15 mt30">Interest Rates</h3>
+            <div class="RightSideBar_creditTile__tbrLG mb16">
+                <ul class="RightSideBar_btmoverflow__wat2N">
+                    <li><a class="font14 lineHeight22"
+                            href="https://www.urbanmoney.com/loans/home-loan/interest-rate">Home Loan Interest Rates</a>
+                    </li>
+                </ul>
+            </div>
+            <h3 class="font16 font600 text181d mb15 mt30">Calculator Types</h3>
+            <div class="RightSideBar_creditTile__tbrLG mb16">
+                <ul class="RightSideBar_btmoverflow__wat2N">
+                    <li><a class="font14 lineHeight22"
+                            href="https://www.urbanmoney.com/loans/home-loan/pre-payment-calculator">PrePayment
+                            Calculator</a></li>
+                    <li><a class="font14 lineHeight22"
+                            href="https://www.urbanmoney.com/loans/home-loan/balance-transfer-calculator">Balance
+                            Transfer</a></li>
+                </ul>
+            </div>
+            <h3 class="font16 font600 text181d mb15 mt30">Check Eligibility</h3>
+            <div class="RightSideBar_creditTile__tbrLG mb16">
+                <ul class="RightSideBar_btmoverflow__wat2N">
+                    <li><a class="font14 lineHeight22"
+                            href="https://www.urbanmoney.com/loans/home-loan/eligibility-calculator">Home Loan
+                            Eligibility Calculator</a></li>
+                    <li><a class="font14 lineHeight22"
+                            href="https://www.urbanmoney.com/loans/personal-loan/eligibility-calculator">Personal Loan
+                            Eligibility Calculator</a></li>
+                </ul>
+            </div>
+        </div> -->
+    </div>
+    <!-- <section class="CreditScore_addSection__oQn5B">
+        <div class="container">
+            <div class="CreditScore_latestCreditBlue__gbIXd">
+                <div class="CreditScore_creditHead__y5A5p"><em class="CreditScore_miloMeter__Z5Bfy"></em>
+                    <p class="font22 textWhite fontMedium lineHeight24 ">Get your latest Credit Score, <span
+                            class="textf7b500">FREE</span></p>
+                </div><button class="btn btn-blue fontBold CreditScore_apply__GSpaV">Check Now <em
+                        class="icon-arrow-right font14"></em></button>
+            </div>
+        </div>
+    </section> -->
+    <!-- <section class="InternalBlog_blogs__XWFqb">
+        <div class="container">
+            <h2 class="font24 textBlack fontsemiBold mb10">Home Loan Guide</h2>
+            <p class="font14 lineHeight22 mb30 text2828">Get in-depth knowledge about all things related to loans and
+                your finances</p>
+            <div class="InternalBlog_tiles__DsGB4">
+                <div class="InternalBlog_indTile__myHvD">
+                    <figure><img alt="Top 10 Best Bank for Home Loan In India 2023" loading="lazy" width="152"
+                        src="./../../../../assets/images/Top-Home-Loans-In-India-2023-2.webp"
+                            style="color: transparent;"></figure>
+                    <div class="InternalBlog_blogItem__iU0p_">
+                        <div class="InternalBlog_blogInfo__JvPtv"><span class="InternalBlog_name__LehqT">Chitra
+                                Chaudhary</span><span class="InternalBlog_date__CiVJk">Nov 21, 2023</span></div><a
+                            target="_blank"
+                            >
+                            <h3 class="InternalBlog_mainTitle__m6PVU">Top 10 Best Bank for Home Loan In India 2023</h3>
+                        </a>
+                        <p class="font14 text777 clearBoth">We have compiled a list of the best banks for a home loan in
+                            India 2023 based on the home loan value it offers to the borrower. These banks offer a
+                            variety of home loan programs with numerous advantag</p><label class="font12 textLink">
+                             </label>
+                    </div>
+                </div>
+                <div class="InternalBlog_indTile__myHvD">
+                    <figure><img alt="Shriram Finance Customer Care Number" loading="lazy" width="152" height="150"
+                            decoding="async" data-nimg="1" class="imgResponsive"
+                            src="./../../../../assets/images/Toll-Free-Customer-Helplines-compressed.webp"
+                            style="color: transparent;"></figure>
+                    <div class="InternalBlog_blogItem__iU0p_">
+                        <div class="InternalBlog_blogInfo__JvPtv"><span class="InternalBlog_name__LehqT">Mansi
+                                Saini</span><span class="InternalBlog_date__CiVJk">Oct 05, 2023</span></div><a
+                            target="_blank"
+                           >
+                            <h3 class="InternalBlog_mainTitle__m6PVU">Shriram Finance Customer Care Number</h3>
+                        </a>
+                        <p class="font14 text777 clearBoth">We explore all the Shriram Finance Customer Care Numbers
+                            provided by the bank. Through these channels of communication, the financier aims to provide
+                            technical support, grievance redressal, and other </p><label class="font12 textLink">
+                            </label>
+                    </div>
+                </div>
+                <div class="InternalBlog_indTile__myHvD">
+                    <figure><img alt="RBI Home Loan Guidelines 2023" loading="lazy" width="152" height="150"
+                            decoding="async" data-nimg="1" class="imgResponsive"
+                            src="./../../../../assets/images/RBI-home-loans-Guidelines-2023-compressed.webp"
+                            style="color: transparent;"></figure>
+                    <div class="InternalBlog_blogItem__iU0p_">
+                        <div class="InternalBlog_blogInfo__JvPtv"><span class="InternalBlog_name__LehqT">Chitra
+                                Chaudhary</span><span class="InternalBlog_date__CiVJk">Sep 11, 2023</span></div><a
+                            target="_blank">
+                            <h3 class="InternalBlog_mainTitle__m6PVU">RBI Home Loan Guidelines 2023</h3>
+                        </a>
+                        <p class="font14 text777 clearBoth">The Reserve Bank of India is the highest banking and
+                            financial authority in India. Along with the Government of India, the central bank revamps
+                            and updates its policies to publish RBI guidelines for h</p><label
+                            class="font12 textLink"></label>
+                    </div>
+                </div>
+            </div>
+            <div class="InternalBlog_cntr__oMpqS"><button class="btn btn-primary font14 textCenterSm btn25">View all
+                    Blogs<em class="icon-arrow-right arw font14 mrg"></em></button></div>
+        </div>
+    </section> -->
+</main>

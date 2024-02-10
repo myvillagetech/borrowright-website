@@ -1,0 +1,789 @@
+// .creditCardBanner_creditCardbanner__gGPqf {
+//     position: relative;
+//     background: #f9fbfe;
+//     z-index: 2
+// }
+
+// .creditCardBanner_bannerback__55rXA {
+//     position: absolute;
+//     object-fit: fill;
+//     width: 100%;
+//     opacity: .6;
+//     z-index: -1;
+//     top: 0
+// }
+
+// .creditCardBanner_bannerWrap__OJ8FX {
+//     display: flex;
+//     align-items: center;
+//     gap: 30px
+// }
+
+// .creditCardBanner_bannerText__AZ9wC {
+//     flex: 1 1
+// }
+
+// .creditCardBanner_bannerImg__N4Pcj {
+//     flex: 1 1;
+//     position: relative;
+//     z-index: 5
+// }
+
+// .creditCardBanner_bannerImg__N4Pcj .creditCardBanner_opentext__7Y5Fd {
+//     line-height: 19px;
+//     min-width: 160px;
+//     height: -moz-fit-content;
+//     height: fit-content;
+//     position: absolute;
+//     text-align: center;
+//     display: flex;
+//     gap: 10px;
+//     align-items: center;
+//     background: hsla(0, 0%, 100%, .9);
+//     border-radius: 50px;
+//     padding: 10px 14px
+// }
+
+// .creditCardBanner_bannerImg__N4Pcj .creditCardBanner_tranfermoney__gpwek {
+//     top: 100px;
+//     right: 0;
+//     animation-delay: -3s
+// }
+
+// .creditCardBanner_bannerImg__N4Pcj .creditCardBanner_realpart__l0Vcq {
+//     bottom: 100px;
+//     right: 0;
+//     animation-delay: -5s;
+//     padding-left: 20px
+// }
+
+// .creditCardBanner_bannerImg__N4Pcj .creditCardBanner_safetransfer__B0Jrj {
+//     bottom: 100px;
+//     left: 100px;
+//     animation-delay: -1s
+// }
+
+// .creditCardBanner_mainTextHead__Z8jbj span {
+//     display: block
+// }
+
+// .creditCardBanner_centerheading__TD9Y_ {
+//     position: relative
+// }
+
+// .creditCardBanner_centerheading__TD9Y_:after {
+//     height: 5px;
+//     width: 50px;
+//     left: 0;
+//     content: "";
+//     background: #f5a623;
+//     border-radius: 5px;
+//     position: absolute;
+//     bottom: -16px
+// }
+
+// .creditCardBanner_fontgradient__oo2BO {
+//     font-size: 48px;
+//     font-weight: 900;
+//     letter-spacing: -.03px;
+//     background: linear-gradient(105deg, #d22c5a 18%, #85aae9 84%);
+//     -webkit-background-clip: text;
+//     -webkit-text-fill-color: transparent
+// }
+
+// .creditCardBanner_opentext__7Y5Fd {
+//     animation: creditCardBanner_opentext__7Y5Fd 3s linear infinite
+// }
+
+// @keyframes creditCardBanner_opentext__7Y5Fd {
+//     0% {
+//         transform: translateX(0)
+//     }
+
+//     50% {
+//         transform: translateX(-10%)
+//     }
+
+//     to {
+//         transform: translateX(0)
+//     }
+// }
+
+// @media screen and (max-width:860px) {
+//     .creditCardBanner_bannerWrap__OJ8FX {
+//         flex-direction: column
+//     }
+
+//     .creditCardBanner_bannerImg__N4Pcj {
+//         max-width: 600px
+//     }
+// }
+
+// @media screen and (max-width:680px) {
+//     .creditCardBanner_bannerWrap__OJ8FX {
+//         flex-direction: column;
+//         gap: 0
+//     }
+
+//     .creditCardBanner_bannerback__55rXA {
+//         display: none
+//     }
+
+//     .creditCardBanner_mainTextHead__Z8jbj {
+//         line-height: 57px
+//     }
+
+//     .creditCardBanner_respmarg5__UAFpr {
+//         margin-bottom: 5px
+//     }
+
+//     .creditCardBanner_centerheading__TD9Y_:after {
+//         bottom: -9px
+//     }
+
+//     .creditCardBanner_fontgradient__oo2BO {
+//         font-size: 40px
+//     }
+
+//     .creditCardBanner_bannerImg__N4Pcj .creditCardBanner_opentext__7Y5Fd {
+//         font-size: 12px;
+//         padding: 5px 15px;
+//         min-width: unset
+//     }
+
+//     .creditCardBanner_bannerImg__N4Pcj .creditCardBanner_opentext__7Y5Fd img {
+//         max-height: 35px
+//     }
+
+//     .creditCardBanner_bannerImg__N4Pcj .creditCardBanner_tranfermoney__gpwek {
+//         top: 50px;
+//         right: 4px
+//     }
+
+//     .creditCardBanner_bannerImg__N4Pcj .creditCardBanner_safetransfer__B0Jrj {
+//         bottom: 80px;
+//         left: 35px
+//     }
+
+//     .creditCardBanner_bannerImg__N4Pcj .creditCardBanner_realpart__l0Vcq {
+//         bottom: 72px;
+//         right: -15px
+//     }
+
+//     .creditCardBanner_mobilecta__5rm66 {
+//         justify-content: center;
+//         width: 80%;
+//         margin: 0 auto
+//     }
+// }
+
+// .topBanks_creditcardbyTopBank__u0yHF {
+//     padding-top: 90px;
+//     padding-bottom: 90px;
+//     position: relative;
+//     background: #f9fbfe;
+//     z-index: 0
+// }
+
+// .topBanks_mobilecta__Tqikm {
+//     display: none
+// }
+
+// .topBanks_headings__l4vFm {
+//     z-index: 2;
+//     position: relative
+// }
+
+// .topBanks_creditcardbyTopBank__u0yHF .topBanks_wavesBack__O_44b {
+//     position: absolute;
+//     top: -93px;
+//     z-index: 1;
+//     width: 100%;
+//     left: -34px
+// }
+
+// .topBanks_creditcardbyTopBank__u0yHF .topBanks_topbankBack__WaWdo {
+//     position: absolute;
+//     right: 0;
+//     bottom: -262px;
+//     height: 100%
+// }
+
+// .topBanks_allbankListing__sQjWB {
+//     margin-top: 65px;
+//     position: relative;
+//     z-index: 1;
+//     border-radius: 50px;
+//     padding: 0 50px;
+//     border: 1px solid #c7ddf9;
+//     background-color: #e7ebfa
+// }
+
+// .topBanks_allbankListing__sQjWB .topBanks_pointers__iAde1 {
+//     cursor: pointer;
+//     width: 34px;
+//     height: 34px;
+//     border-radius: 50px;
+//     position: absolute;
+//     top: 50%;
+//     border: 1px solid hsla(0, 0%, 62%, .2);
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     background-color: #fff
+// }
+
+// .topBanks_allbankListing__sQjWB .topBanks_leftpointarw__y3w2g {
+//     left: -20px
+// }
+
+// .topBanks_allbankListing__sQjWB .topBanks_rightpointarw__ftQXu {
+//     right: -20px
+// }
+
+// .topBanks_allbankListing__sQjWB ul {
+//     display: flex;
+//     gap: 25px;
+//     overflow: auto;
+//     margin: 0 -80px;
+//     padding: 54px 80px
+// }
+
+// .topBanks_allbankListing__sQjWB ul.topBanks_alignCenter__Ff9Wk {
+//     justify-content: center
+// }
+
+// .topBanks_allbankListing__sQjWB ul li {
+//     box-shadow: 0 20px 80px 0 rgba(0, 0, 0, .1);
+//     text-align: center;
+//     padding: 30px 25px;
+//     max-width: 220px;
+//     width: 100%;
+//     border-radius: 12px;
+//     background-color: #fff;
+//     display: flex;
+//     flex-direction: column
+// }
+
+// .topBanks_allbankListing__sQjWB ul li a {
+//     margin-top: auto
+// }
+
+// .topBanks_allbankListing__sQjWB ul li .topBanks_bankLogo__YZJq_ {
+//     height: 92px;
+//     margin-bottom: 25px;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     border-radius: 8px;
+//     padding: 20px 10px;
+//     text-align: center;
+//     border: 1px solid hsla(0, 0%, 62%, .2);
+//     background-color: #fff
+// }
+
+// .topBanks_allbankListing__sQjWB ul li .topBanks_bankHeadingname__bZ7_N {
+//     height: 40px;
+//     white-space: nowrap
+// }
+
+// .topBanks_centerheading__f430q {
+//     position: relative
+// }
+
+// .topBanks_centerheading__f430q:after {
+//     content: "";
+//     width: 30px;
+//     height: 3px;
+//     background: #f5a623;
+//     border-radius: 5px;
+//     position: absolute;
+//     bottom: -16px;
+//     left: calc(50% - 15px)
+// }
+
+// @media screen and (max-width:1024px) {
+//     .topBanks_creditcardbyTopBank__u0yHF .topBanks_wavesBack__O_44b {
+//         top: 0
+//     }
+// }
+
+// @media screen and (max-width:860px) {
+//     .topBanks_allbankListing__sQjWB ul li {
+//         box-shadow: unset
+//     }
+
+//     .topBanks_allbankListing__sQjWB ul.topBanks_alignCenter__Ff9Wk {
+//         justify-content: flex-start
+//     }
+// }
+
+// @media screen and (max-width:680px) {
+
+//     .topBanks_creditcardbyTopBank__u0yHF .topBanks_topbankBack__WaWdo,
+//     .topBanks_creditcardbyTopBank__u0yHF .topBanks_wavesBack__O_44b,
+//     .topBanks_featurebg__V_Tlk,
+//     .topBanks_webcta__S8_dT {
+//         display: none
+//     }
+
+//     .topBanks_mobilecta__Tqikm {
+//         display: block;
+//         width: 80%;
+//         margin: 0 auto;
+//         font-size: 12px
+//     }
+
+//     .topBanks_creditcardbyTopBank__u0yHF {
+//         padding: 60px 0
+//     }
+
+//     .topBanks_allbankListing__sQjWB {
+//         padding: 30px 20px;
+//         margin: 40px -15px 0;
+//         border-radius: 10px
+//     }
+
+//     .topBanks_allbankListing__sQjWB ul {
+//         overflow: auto;
+//         gap: 20px;
+//         padding: unset;
+//         margin: unset
+//     }
+
+//     .topBanks_allbankListing__sQjWB ul li {
+//         max-width: unset;
+//         width: 100%;
+//         flex: 0 0 50%;
+//         box-shadow: none
+//     }
+
+//     .topBanks_allbankListing__sQjWB .topBanks_pointers__iAde1 {
+//         width: 30px;
+//         height: 30px
+//     }
+
+//     .topBanks_allbankListing__sQjWB .topBanks_leftpointarw__y3w2g {
+//         left: 5px
+//     }
+
+//     .topBanks_allbankListing__sQjWB .topBanks_rightpointarw__ftQXu {
+//         right: 3px
+//     }
+
+//     .topBanks_allbankListing__sQjWB ul li .topBanks_bankLogo__YZJq_ {
+//         height: 70px;
+//         padding: 15px 10px
+//     }
+// }
+
+// .creditCardFeatures_cardFeatures__FMth3 {
+//     background: #f9fbfe
+// }
+
+// .creditCardFeatures_offertiles__kp5V_ {
+//     position: relative;
+//     display: grid;
+//     grid-template-columns: repeat(3, 1fr);
+//     grid-gap: 60px;
+//     gap: 60px;
+//     margin-top: 80px
+// }
+
+// .creditCardFeatures_offertiles__kp5V_ .creditCardFeatures_offers__vBwQX {
+//     text-align: center
+// }
+
+// .creditCardFeatures_offertiles__kp5V_ .creditCardFeatures_offers__vBwQX:hover .creditCardFeatures_offertiles__kp5V_ .creditCardFeatures_offers__vBwQX .creditCardFeatures_textdesc__pCZbB {
+//     max-width: 200px;
+//     margin: 0 auto
+// }
+
+// .creditCardFeatures_featurebg__DqrWZ {
+//     position: absolute;
+//     z-index: -1;
+//     height: 472px
+// }
+
+// .creditCardFeatures_offers__vBwQX .creditCardFeatures_roundTriangle__mfJh5 {
+//     background: url(/assets/images/Triangle-fund-house.svg) no-repeat;
+//     height: 120px;
+//     width: 130px;
+//     display: flex;
+//     align-items: center;
+//     margin: 0 auto 20px;
+//     justify-content: center
+// }
+
+// .creditCardFeatures_centerheading__tlgh6 {
+//     position: relative
+// }
+
+// .creditCardFeatures_centerheading__tlgh6:after {
+//     content: "";
+//     width: 30px;
+//     height: 3px;
+//     background: #f5a623;
+//     border-radius: 5px;
+//     position: absolute;
+//     bottom: -16px;
+//     left: calc(50% - 15px)
+// }
+
+// @media screen and (max-width:680px) {
+//     .creditCardFeatures_offertiles__kp5V_ {
+//         grid-template-columns: repeat(2, 1fr);
+//         gap: 20px;
+//         margin-top: 40px
+//     }
+
+//     .creditCardFeatures_offers__vBwQX .creditCardFeatures_roundTriangle__mfJh5 {
+//         background-position: 50%;
+//         background-size: 60%;
+//         height: 100px
+//     }
+
+//     .creditCardFeatures_offers__vBwQX .creditCardFeatures_roundTriangle__mfJh5 img {
+//         max-width: 30px !important
+//     }
+// }
+
+// .creditCardsOffers_popularCreditCards__9Drnz {
+//     padding: 150px 0 50px;
+//     background: #f9fbfe;
+//     position: relative
+// }
+
+// .creditCardsOffers_bluebackcardfeature__HVI8R {
+//     right: -226px;
+//     bottom: -175px;
+//     position: absolute;
+//     z-index: -1
+// }
+
+// .creditCardsOffers_yellowbackcardfeature__W1zhS {
+//     position: absolute;
+//     left: -156px;
+//     top: 110px
+// }
+
+// .creditCardsOffers_popularcreditblue__8tH7y {
+//     position: absolute;
+//     top: -271px
+// }
+
+// .creditCardsOffers_centerheading__3frZb {
+//     position: relative
+// }
+
+// .creditCardsOffers_centerheading__3frZb:after {
+//     content: "";
+//     width: 30px;
+//     height: 3px;
+//     background: #f5a623;
+//     border-radius: 5px;
+//     position: absolute;
+//     bottom: -16px;
+//     left: calc(50% - 15px)
+// }
+
+// .creditCardsOffers_allCreditCards__xCZFY {
+//     position: relative
+// }
+
+// .creditCardsOffers_bankCard__Z2mCu {
+//     cursor: pointer;
+//     padding: 20px;
+//     position: relative;
+//     display: none;
+//     flex-direction: column;
+//     max-width: 335px;
+//     width: 100%;
+//     border-radius: 8px;
+//     border: 1px solid #e0e0e0;
+//     background-color: #fffefe;
+//     flex-shrink: 0
+// }
+
+// .creditCardsOffers_bankCard__Z2mCu.creditCardsOffers_active__qQT2J {
+//     display: flex
+// }
+
+// .creditCardsOffers_bankCard__Z2mCu.creditCardsOffers_inActive__WmhET {
+//     display: none
+// }
+
+// .creditCardsOffers_bankCard__Z2mCu:hover {
+//     background: #f6f6f6;
+//     box-shadow: 10px 10px 20px 0 rgba(30, 30, 30, .05)
+// }
+
+// .creditCardsOffers_bankCard__Z2mCu figure {
+//     padding: 5px;
+//     margin-top: -68px;
+//     align-self: flex-start;
+//     display: inline-block;
+//     border-radius: 8px;
+//     box-shadow: 10px 10px 20px 0 rgba(30, 30, 30, .05);
+//     border: 1px solid hsla(0, 0%, 62%, .2);
+//     background-color: #fff
+// }
+
+// .creditCardsOffers_bankCard__Z2mCu figure img {
+//     border-radius: 8px
+// }
+
+// .creditCardsOffers_bankCard__Z2mCu .creditCardsOffers_centerheading__3frZb {
+//     display: block
+// }
+
+// .creditCardsOffers_bankCard__Z2mCu .creditCardsOffers_centerheading__3frZb:after {
+//     width: 40px;
+//     height: 2px;
+//     left: 0;
+//     bottom: -20px
+// }
+
+// .creditCardsOffers_bankCard__Z2mCu ul {
+//     margin-top: 40px;
+//     padding: 10px;
+//     position: relative
+// }
+
+// .creditCardsOffers_cardDesc__glhpD {
+//     position: relative
+// }
+
+// .creditCardsOffers_opnBox__TNDGN {
+//     display: none
+// }
+
+// .creditCardsOffers_bankCard__Z2mCu ul li {
+//     display: flex;
+//     align-items: flex-start;
+//     gap: 16px;
+//     line-height: 18px
+// }
+
+// .creditCardsOffers_bankCard__Z2mCu ul li span {
+//     flex-shrink: 0
+// }
+
+// .creditCardsOffers_bankCard__Z2mCu ul li~li {
+//     margin-top: 18px
+// }
+
+// .creditCardsOffers_cardBtnBox__3uIpH {
+//     margin-top: auto;
+//     display: flex;
+//     align-items: center;
+//     gap: 15px
+// }
+
+// .creditCardsOffers_cardBtnBox__3uIpH a {
+//     padding: 10px 18px
+// }
+
+// .creditCardsOffers_cardBtnBox__3uIpH .creditCardsOffers_btn-default__k2tKU {
+//     border: 1px solid hsla(0, 0%, 62%, .2)
+// }
+
+// .creditCardsOffers_paginations__OBsRs {
+//     position: absolute;
+//     display: flex;
+//     gap: 12px;
+//     left: 50%;
+//     bottom: 65px;
+//     align-items: center
+// }
+
+// .creditCardsOffers_paginations__OBsRs span {
+//     width: 15px;
+//     height: 15px;
+//     cursor: pointer;
+//     display: inline-flex;
+//     border-radius: 50px;
+//     border: 2px solid transparent;
+//     position: relative;
+//     align-items: center;
+//     justify-content: center
+// }
+
+// .creditCardsOffers_paginations__OBsRs span:after {
+//     content: "";
+//     width: 7px;
+//     height: 7px;
+//     border-radius: 10px;
+//     background: #dcdcdc;
+//     display: block
+// }
+
+// .creditCardsOffers_paginations__OBsRs span.creditCardsOffers_active__qQT2J {
+//     border: 2px solid #3a3a44
+// }
+
+// .creditCardsOffers_paginations__OBsRs span.creditCardsOffers_active__qQT2J:after {
+//     background: #3a3a44
+// }
+
+// .creditCardsOffers_ribbon__j7ewx {
+//     position: absolute;
+//     right: -6px;
+//     top: 20px;
+//     padding: 5px;
+//     color: #f5f3f3;
+//     font-size: 9px;
+//     border-radius: 0 4px 0 0
+// }
+
+// .creditCardsOffers_ribbon__j7ewx:after {
+//     content: "";
+//     width: 6px;
+//     height: 4px;
+//     border-radius: 0 0 4px 0;
+//     position: absolute;
+//     right: 0;
+//     bottom: -4px
+// }
+
+// .creditCardsOffers_ribbonArrow___K6h_ {
+//     height: 21px;
+//     position: absolute;
+//     left: -14px;
+//     top: 0
+// }
+
+// .creditCardsOffers_ribbonArrow___K6h_ svg {
+//     height: 100%
+// }
+
+// .creditCardsOffers_red__BU83C {
+//     background-image: linear-gradient(272deg, #622774, #c53364 100%)
+// }
+
+// .creditCardsOffers_red__BU83C:after {
+//     background: linear-gradient(332deg, #622774, #c53364 93%)
+// }
+
+// .creditCardsOffers_red__BU83C svg {
+//     color: #c53364
+// }
+
+// .creditCardsOffers_cardMain__Ct9TD {
+//     overflow-x: hidden;
+//     scroll-behavior: smooth;
+//     display: flex;
+//     gap: 27px;
+//     padding-top: 125px
+// }
+
+// .creditCardsOffers_tabs__SQhT0 {
+//     position: absolute;
+//     width: 32px;
+//     height: 32px;
+//     z-index: 2;
+//     top: 50%;
+//     border: 1px solid #dbdbdb8f;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     border-radius: 50px;
+//     box-shadow: -10px 10px 20px 0 rgba(30, 30, 30, .05);
+//     background-color: #fff
+// }
+
+// .creditCardsOffers_righttab__sFWbj {
+//     right: -14px
+// }
+
+// .creditCardsOffers_lefttab__jB65W {
+//     left: -14px
+// }
+
+// .creditCardsOffers_lefttab__jB65W img {
+//     transform: rotate(90deg)
+// }
+
+// .creditCardsOffers_righttab__sFWbj img {
+//     transform: rotate(-90deg)
+// }
+
+// @media screen and (max-width:1024px) {
+//     .creditCardsOffers_bluebackcardfeature__HVI8R {
+//         right: 0
+//     }
+// }
+
+// @media screen and (max-width:860px) {
+//     .creditCardsOffers_popularcreditblue__8tH7y {
+//         display: none
+//     }
+
+//     .creditCardsOffers_allCreditCards__xCZFY {
+//         margin-top: 50px
+//     }
+// }
+
+// @media screen and (max-width:680px) {
+//     .creditCardsOffers_allCreditCards__xCZFY {
+//         margin-top: 95px;
+//         justify-content: center
+//     }
+
+//     .creditCardsOffers_bluebackcardfeature__HVI8R,
+//     .creditCardsOffers_popularcreditblue__8tH7y,
+//     .creditCardsOffers_yellowbackcardfeature__W1zhS {
+//         display: none
+//     }
+
+//     .creditCardsOffers_noWrap__I2tv6 {
+//         white-space: nowrap;
+//         padding: 10px 15px
+//     }
+
+//     .creditCardsOffers_contentFull__lop8t {
+//         height: 100%
+//     }
+
+//     .creditCardsOffers_popularCreditCards__9Drnz {
+//         padding: 60px 0
+//     }
+
+//     .creditCardsOffers_paginations__OBsRs {
+//         bottom: 15px;
+//         left: calc(50% - 24px)
+//     }
+
+//     .creditCardsOffers_allCreditCards__xCZFY .creditCardsOffers_bankCard__Z2mCu {
+//         flex: 0 0 100%
+//     }
+
+//     .creditCardsOffers_cardBtnBox__3uIpH {
+//         margin-top: 15px
+//     }
+
+//     .creditCardsOffers_bankCard__Z2mCu .creditCardsOffers_cardDesc__glhpD .creditCardsOffers_opnBox__TNDGN {
+//         display: block;
+//         position: absolute;
+//         bottom: -23px;
+//         left: 50px
+//     }
+
+//     .creditCardsOffers_opnBox__TNDGN .creditCardsOffers_icon-icon-angle-right__xWwtq {
+//         font-size: 6px
+//     }
+
+//     .creditCardsOffers_opnBox__TNDGN .creditCardsOffers_icon-icon-angle-right__xWwtq:before {
+//         color: #474ebb
+//     }
+
+//     .creditCardsOffers_bankCard__Z2mCu ul {
+//         max-height: 49px;
+//         overflow: auto;
+//         display: none
+//     }
+
+//     .creditCardsOffers_bankCard__Z2mCu .creditCardsOffers_centerheading__3frZb:after {
+//         bottom: -10px
+//     }
+// }

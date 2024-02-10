@@ -1,0 +1,61 @@
+.CheckCreditBanner_cibilBtnweb__WA5dJ:hover {
+  background: #ffff;
+}
+
+.carousel-indicators [data-bs-target] {
+  opacity: 1;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  display: flex;
+  border-radius: 50px;
+  border: 2px solid transparent;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  font-size: 0;
+  color: transparent;
+}
+
+.carousel-indicators [data-bs-target]::after {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 10px;
+  background: #dcdcdc;
+  display: block;
+}
+
+.carousel-indicators [data-bs-target].active {
+  border: 2px solid #474ebb;
+}
+
+.carousel-indicators [data-bs-target].active::after {
+  background: #474ebb;
+}
+
+.CheckCreditBanner_cibilBtnweb__WA5dJ i {
+  font-size: 14px;
+}
+
+.TrendingProduct_checkEl__9Ipug {
+  color: #474ebb;
+  margin-top: 16px;
+  display: block;
+  line-height: normal;
+  font-weight: 500;
+}
+
+.bi-chevron-right {
+  font-size: 16px;
+  font-weight: 700;
+  margin-top: 4px;
+  margin-left: 5px;
+}
+
+.ExternalLinks_dropDown__3nShR i {
+  font-size: 15px;
+  margin-left: 8px;
+  color: #fff;
+}
