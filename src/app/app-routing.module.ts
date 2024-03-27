@@ -54,266 +54,274 @@ import { SukanyaSamriddhiYojanaCalculatorComponent } from './calculators/financi
 
 const routes: Routes = [
   {
-    path: '',
-    pathMatch: 'full',
-    redirectTo: 'home',
+    path : '',
+    pathMatch : 'full',
+    redirectTo: 'home'
   },
   {
     path: '',
     component: MainComponent,
-    children: [
+    children:[
       {
-        path: 'home',
-        component: HomeComponent,
+        path : "home",
+        component: HomeComponent
       },
       {
-        path: 'lifeInsurance',
-        component: LifeInsuranceComponent,
+        path : "lifeInsurance",
+        component: LifeInsuranceComponent
       },
-
+    
       {
-        path: 'generalaInsurancePlans',
-        component: GeneralInsurancePlansComponent,
+        path : "generalaInsurancePlans",
+        component: GeneralInsurancePlansComponent
       },
-
+    
       {
-        path: 'homeLoan',
-        component: HomeLoanComponent,
-      },
-
-      {
-        path: 'personalLoan',
-        component: PersonalLoanComponent,
+        path : "homeLoan",
+        component:HomeLoanComponent
       },
 
       {
-        path: 'businessLoan',
-        component: BusinessLoanComponent,
+        path : "personalLoan",
+        component:PersonalLoanComponent
       },
 
       {
-        path: 'loanAgainstProperty',
-        component: LoanAgainstPropertyComponent,
+        path : "businessLoan",
+        component:BusinessLoanComponent
       },
 
       {
-        path: 'IDFCBankCreditCard',
-        component: IDFCBankCreditCardComponent,
+        path : "loanAgainstProperty",
+        component:LoanAgainstPropertyComponent
       },
 
       {
-        path: 'YESBankCreditCard',
-        component: YESBankCreditCardComponent,
+        path : "IDFCBankCreditCard",
+        component:IDFCBankCreditCardComponent
       },
 
       {
-        path: 'standardCharteredCreditCard',
-        component: StandardCharteredCreditCardComponent,
+        path : "YESBankCreditCard",
+        component:YESBankCreditCardComponent
       },
 
       {
-        path: 'AxisBankCreditCard',
-        component: AxisBankCreditCardComponent,
+        path : "standardCharteredCreditCard",
+        component:StandardCharteredCreditCardComponent
       },
 
       {
-        path: 'mutualFunds',
-        component: MutualFundsComponent,
+        path : "AxisBankCreditCard",
+        component:AxisBankCreditCardComponent
       },
 
       {
-        path: 'ELSS',
-        component: ELSSComponent,
+        path : "mutualFunds",
+        component:MutualFundsComponent
       },
 
       {
-        path: 'employeesProvidentFund',
-        component: EmployeesProvidentFundComponent,
+        path : "ELSS",
+        component:ELSSComponent
       },
 
       {
-        path: 'fixedDeposit',
-        component: FixedDepositComponent,
+        path : "employeesProvidentFund",
+        component:EmployeesProvidentFundComponent
       },
 
       {
-        path: 'nationalPensionScheme',
-        component: NationalPensionSchemeComponent,
+        path : "fixedDeposit",
+        component:FixedDepositComponent
       },
 
       {
-        path: 'nationalSavingsCertificate',
-        component: NationalSavingsCertificateComponent,
+        path : "nationalPensionScheme",
+        component:NationalPensionSchemeComponent
       },
 
       {
-        path: 'publicProvidentFund',
-        component: PublicProvidentFundComponent,
+        path : "nationalSavingsCertificate",
+        component:NationalSavingsCertificateComponent
       },
 
       {
-        path: 'recurringDeposit',
-        component: RecurringDepositComponent,
+        path : "publicProvidentFund",
+        component:PublicProvidentFundComponent
       },
 
       {
-        path: 'seniorCitizenSavingScheme',
-        component: SeniorCitizenSavingSchemeComponent,
+        path : "recurringDeposit",
+        component:RecurringDepositComponent
       },
 
       {
-        path: 'systematicInvestmentPlan',
-        component: SystematicInvestmentPlanComponent,
+        path : "seniorCitizenSavingScheme",
+        component:SeniorCitizenSavingSchemeComponent
       },
 
       {
-        path: 'voluntaryProvidentFund',
-        component: VoluntaryProvidentFundComponent,
+        path : "systematicInvestmentPlan",
+        component:SystematicInvestmentPlanComponent
       },
 
       {
-        path: 'eligibilityCalculator',
-        component: EligibilityCalculatorComponent,
+        path : "voluntaryProvidentFund",
+        component:VoluntaryProvidentFundComponent
       },
 
       {
-        path: 'loan',
-        component: LoanComponent,
+        path : "eligibilityCalculator",
+        component:EligibilityCalculatorComponent
       },
 
       {
-        path: 'insurance',
-        component: InsuranceComponent,
+        path : "loan",
+        component:LoanComponent
       },
 
       {
-        path: 'creditCard',
-        component: CreditCardComponent,
+        path : "insurance",
+        component:InsuranceComponent
       },
 
       {
-        path: 'investment',
-        component: InvestmentComponent,
+        path : "creditCard",
+        component:CreditCardComponent
       },
 
       {
-        path: 'calculators',
-        component: CalculatorsComponent,
+        path : "investment",
+        component:InvestmentComponent
       },
 
       {
-        path: 'emiCalculator',
-        component: EmiCalculatorComponent,
+        path : "calculators",
+        component:CalculatorsComponent
       },
 
       {
-        path: 'pre-paymentCalculator',
-        component: PrePaymentCalculatorComponent,
+        path : "emiCalculator",
+        component:EmiCalculatorComponent
       },
 
       {
-        path: 'balanceTransferCalculator',
-        component: BalanceTransferCalculatorComponent,
+        path : "pre-paymentCalculator",
+        component:PrePaymentCalculatorComponent
       },
 
       {
-        path: 'personalEmiCalculator',
-        component: PersonalEmiCalculatorComponent,
+        path : "balanceTransferCalculator",
+        component:BalanceTransferCalculatorComponent
       },
 
       {
-        path: 'personalPre-paymentCalculator',
-        component: PersonalPrePaymentCalculatorComponent,
+        path : "personalEmiCalculator",
+        component:PersonalEmiCalculatorComponent
       },
 
       {
-        path: 'personalBalanceTransferCalculator',
-        component: PersonalBalanceTransferCalculatorComponent,
+        path : "personalPre-paymentCalculator",
+        component:PersonalPrePaymentCalculatorComponent
       },
 
       {
-        path: 'businessEmiCalculator',
-        component: BusinessEmiCalculatorComponent,
+        path : "personalBalanceTransferCalculator",
+        component:PersonalBalanceTransferCalculatorComponent
       },
 
       {
-        path: 'businessPre-paymentCalculator',
-        component: BusinessPrePaymentCalculatorComponent,
+        path : "businessEmiCalculator",
+        component:BusinessEmiCalculatorComponent
       },
 
       {
-        path: 'businessBalanceTransferCalculator',
-        component: BusinessBalanceTransferCalculatorComponent,
-      },
-      // financial Calcualator
-
-      {
-        path: 'incomeTaxCalculator',
-        component: IncomeTaxCalculatorComponent,
+        path : "businessPre-paymentCalculator",
+        component:BusinessPrePaymentCalculatorComponent
+        
       },
 
       {
-        path: 'HRACalculator',
-        component: HRACalculatorComponent,
-      },
+        path : "businessBalanceTransferCalculator",
+        component:BusinessBalanceTransferCalculatorComponent
+      },  
+        // financial Calcualator
 
-      {
-        path: 'mutualFundCalculator',
-        component: MutualFundCalculatorComponent,
-      },
+        {
+          path : "incomeTaxCalculator",
+          component:IncomeTaxCalculatorComponent
+        },
+  
+        {
+          path : "HRACalculator",
+          component:HRACalculatorComponent
+        },
+  
+        {
+          path : "mutualFundCalculator",
+          component:MutualFundCalculatorComponent
+          
+        },
+  
+        {
+          path : "RDCalculator",
+          component:RDCalculatorComponent
+        },
 
-      {
-        path: 'RDCalculator',
-        component: RDCalculatorComponent,
-      },
+        {
+          path : "SIPCalculator",
+          component:SIPCalculatorComponent
+        },
 
-      {
-        path: 'SIPCalculator',
-        component: SIPCalculatorComponent,
-      },
+        {
+          path : "GSTCalculator",
+          component:GSTCalculatorComponent
+        },
 
-      {
-        path: 'GSTCalculator',
-        component: GSTCalculatorComponent,
-      },
+        {
+          path : "TDSCalculator",
+          component:TDSCalculatorComponent
+        },
 
-      {
-        path: 'TDSCalculator',
-        component: TDSCalculatorComponent,
-      },
+        {
+          path : "lumpsumCalculator",
+          component:LumpsumCalculatorComponent
+        },
 
-      {
-        path: 'lumpsumCalculator',
-        component: LumpsumCalculatorComponent,
-      },
+        {
+          path : "sukanyaSamriddhiYojanaCalculator",
+          component:SukanyaSamriddhiYojanaCalculatorComponent
+        },
 
-      {
-        path: 'sukanyaSamriddhiYojanaCalculator',
-        component: SukanyaSamriddhiYojanaCalculatorComponent,
-      },
+        {
+          path : "salaryCalculator",
+          component:SalaryCalculatorComponent
+        },
+        {
+          path : "FDCalculator",
+          component:FDCalculatorComponent
+        },
+        {
+          path : "PPFCalculator",
+          component:PPFCalculatorComponent
+        },
+      
 
-      {
-        path: 'salaryCalculator',
-        component: SalaryCalculatorComponent,
-      },
-      {
-        path: 'FDCalculator',
-        component: FDCalculatorComponent,
-      },
-      {
-        path: 'PPFCalculator',
-        component: PPFCalculatorComponent,
-      },
-    ],
+
+
+    ]
   },
   {
-    path: 'login',
-    component: LoginComponent,
+    path : "login",
+    component: LoginComponent
   },
+  
+
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, { useHash: true })],
-  exports: [RouterModule],
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }
