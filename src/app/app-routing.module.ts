@@ -70,12 +70,12 @@ const routes: Routes = [
         path : "lifeInsurance",
         component: LifeInsuranceComponent
       },
-    
+
       {
         path : "generalaInsurancePlans",
         component: GeneralInsurancePlansComponent
       },
-    
+
       {
         path : "homeLoan",
         component:HomeLoanComponent
@@ -239,31 +239,31 @@ const routes: Routes = [
       {
         path : "businessPre-paymentCalculator",
         component:BusinessPrePaymentCalculatorComponent
-        
+
       },
 
       {
         path : "businessBalanceTransferCalculator",
         component:BusinessBalanceTransferCalculatorComponent
-      },  
+      },
         // financial Calcualator
 
         {
           path : "incomeTaxCalculator",
           component:IncomeTaxCalculatorComponent
         },
-  
+
         {
           path : "HRACalculator",
           component:HRACalculatorComponent
         },
-  
+
         {
           path : "mutualFundCalculator",
           component:MutualFundCalculatorComponent
-          
+
         },
-  
+
         {
           path : "RDCalculator",
           component:RDCalculatorComponent
@@ -306,7 +306,7 @@ const routes: Routes = [
           path : "PPFCalculator",
           component:PPFCalculatorComponent
         },
-      
+
 
 
 
@@ -316,12 +316,12 @@ const routes: Routes = [
     path : "login",
     component: LoginComponent
   },
-  
+
 
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, { useHash: true })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
